@@ -1,18 +1,21 @@
-.container{
-  display: block;
-  border: #4f4f4f 4px solid;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 217px;
-  margin-bottom: 281px;
+.contenedor{
+  
+  border: #4f4f4f 3px solid;
+  width: 588px;
+  height: 526px;
+  
+  top: 217px;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: "Montserrat";
 }
 
 
 form{
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 40px;
+  margin-bottom: 100px;
   text-align: center;
-  border: 2em black;
+  border: 2px black;
 
 }
 
@@ -46,7 +49,7 @@ form .example-form{
 
   .container-buttons{
     justify-content: center;
-  
+    margin-bottom: 120px;
   }
    .container-buttons input{
 
@@ -64,10 +67,9 @@ form .example-form{
     
   }
   .recordarPassword{
-    margin-top: 5px;
+    
     color: #bdbd
     }
 
-  .submitcuenta{
-    margin-bottom: 150px;
-  }
+  
+  
