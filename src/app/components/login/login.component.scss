@@ -1,24 +1,34 @@
+.container{
+  display: block;
+  border: #4f4f4f 4px solid;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 217px;
+  margin-bottom: 281px;
+}
+
+
 form{
   margin-top: 5em;
+  margin-bottom: 5em;
   text-align: center;
   border: 2em black;
+
 }
 
 form .example-form{
   width: 580px;
 }
-.container{
-  display: block;
-  border: #4f4f4f 4px solid;
-}
 
 .mat-form-field{
   width: 500px;
+  
 }
 
 ::ng-deep .mat-form-field-label {
   /*change color of label*/
   color: #bdbd !important;
+  font: bold;
  }
 
 ::ng-deep .mat-focused .mat-form-field-label {
@@ -32,4 +42,32 @@ form .example-form{
   ::ng-deep.mat-form-field-ripple {
    /*change color of underline when focused*/
    background-color: #4f4f4f !important;;
+  }
+
+  .container-buttons{
+    justify-content: center;
+  
+  }
+   .container-buttons input{
+
+  background-color:white;
+  border: none;
+  color: #4f4f4f;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin-top: 10px; 
+  width: 380px;
+  cursor: pointer;
+  border: 2px solid #4f4f4f;
+  margin-top: 3em;
+  
+    
+  }
+  .recordarPassword{
+    margin-top: 5px;
+    color: #bdbd
+    }
+
+  .submitcuenta{
+    margin-bottom: 150px;
   }
