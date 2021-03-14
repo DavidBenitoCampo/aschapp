@@ -1,0 +1,70 @@
+.contenedor{
+  
+    border: #4f4f4f 3px solid;
+    width: 588px;
+    height: 626px;
+    margin: 100px auto;
+    justify-content: center;
+    font-family: "Montserrat";
+  }
+  
+  
+  form{
+    margin-top: 40px;
+    margin-bottom: 100px;
+    text-align: center;
+    border: 2px black;
+  
+  }
+  
+  form .example-form{
+    width: 580px;
+  }
+  
+  mat-form-field{
+    width: 450px;
+    
+  }
+  
+  ::ng-deep .mat-form-field-label {
+    /*change color of label*/
+    color: #bdbd !important;
+    font: bold;
+   }
+  
+  ::ng-deep .mat-focused .mat-form-field-label {
+      /*change color of label*/
+      color: #4f4f4f !important;
+     }
+     ::ng-deep.mat-form-field-underline {
+      /*change color of underline*/
+      background-color: #bdbd !important;
+    } 
+    ::ng-deep.mat-form-field-ripple {
+     /*change color of underline when focused*/
+     background-color: #4f4f4f !important;;
+    }
+  
+    .container-buttons{
+      justify-content: center;
+      margin-bottom: 120px;
+    }
+     .container-buttons input{
+  
+    background-color:white;
+    border: none;
+    color: #4f4f4f;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin-top: 10px; 
+    width: 380px;
+    cursor: pointer;
+    border: 2px solid #4f4f4f;
+    margin-top: 3em;
+    
+      
+    }
+    .recordarPassword{
+      
+      color: #bdbd
+      }

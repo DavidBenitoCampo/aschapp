@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
@@ -11,6 +12,11 @@ import { FeedComponent } from './components/feed/feed.component';
 import { ContenidoComponent } from './components/contenido/contenido.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { RegistroProductoComponent } from './components/registro-producto/registro-producto.component';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgMatIconBarModule } from 'ng-mat-icon-bar';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +26,20 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     CarritoComponent,
     FeedComponent,
-    ContenidoComponent
+    ContenidoComponent,
+    RegistroProductoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatInputModule,
-    AppRoutingModule
-
+    AppRoutingModule,
+    MaterialFileInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatFormFieldModule,
+    NgMatIconBarModule
 
   ],
   providers: [],

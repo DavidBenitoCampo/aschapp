@@ -10,13 +10,17 @@
         </div>
 
         <div style="margin-top: 40px;">
-            <mat-form-field class="example-full-width">
-                <mat-label>
-                    CONTRASEÑA
-                </mat-label>
-                <input matInput type="password">
+
+            <mat-form-field>
+                <mat-form-field appearance="IMAGEN">
+                    <mat-label>IMAGEN</mat-label>
+                    <ngx-mat-file-input formControlName="outline" placeholder="IMAGEN">
+                    </ngx-mat-file-input>
+                    <mat-icon matSuffix>folder</mat-icon>
+                </mat-form-field>
             </mat-form-field>
         </div>
+
         <div class="container-buttons">
             <div>
                 <input type="submit" value="INICIAR SESIÓN">
