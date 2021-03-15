@@ -7,6 +7,10 @@
     display: flex;
     justify-content: center;
     column-count: 2;
+   
+ .row input{
+ font-weight: bold;
+ }
 }
 
 .contenedor figure {

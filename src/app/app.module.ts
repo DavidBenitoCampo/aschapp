@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CdkTableModule } from '@angular/cdk/table'
+import { CdkTreeModule } from '@angular/cdk/tree';
 
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
@@ -16,6 +18,10 @@ import { RegistroProductoComponent } from './components/registro-producto/regist
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgMatIconBarModule } from 'ng-mat-icon-bar';
+import { MatIconModule } from '@angular/material/icon'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 
 @NgModule({
@@ -27,7 +33,8 @@ import { NgMatIconBarModule } from 'ng-mat-icon-bar';
     CarritoComponent,
     FeedComponent,
     ContenidoComponent,
-    RegistroProductoComponent
+    RegistroProductoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,12 @@ import { NgMatIconBarModule } from 'ng-mat-icon-bar';
     ReactiveFormsModule,
     FormsModule,
     MatFormFieldModule,
-    NgMatIconBarModule
+    NgMatIconBarModule,
+    MatIconModule,
+    CdkTableModule,
+    CdkTreeModule,
+    FontAwesomeModule
+
 
   ],
   providers: [],

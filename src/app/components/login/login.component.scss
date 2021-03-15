@@ -61,13 +61,18 @@ mat-form-field{
   cursor: pointer;
   border: 2px solid #4f4f4f;
   margin-top: 3em;
-  
+  font-weight: bold;
     
   }
   .recordarPassword{
     
     color: #bdbd
     }
+   
+
+  mat-icon{
+    color: #4f4f4f;
+  }
 
   
   
