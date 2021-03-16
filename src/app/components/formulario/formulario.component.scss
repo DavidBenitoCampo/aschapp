@@ -1,0 +1,55 @@
+.contenedor-formulario{
+    width: 40%;
+    height: 600px;
+    border: 2px solid #4F4F4F;
+    margin: auto;
+    padding: 3%;
+    justify-content: center;
+}
+
+.formulario-registro{
+    text-align: center;
+}
+
+
+.input-formulario{
+    width: 100%;
+}
+
+
+section{
+    margin-bottom: 20px;
+}
+
+.contenedor-formulario div .cargar-imagen{
+    width: 100%;
+}
+
+button{
+    width: 225px;
+    height: 45px;
+    border: 1px solid #4F4F4F;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: white;
+}
+
+
+::ng-deep .mat-form-field-label {
+    /*change color of label*/
+    color: #bdbd !important;
+    font: bold;
+   }
+  
+  ::ng-deep .mat-focused .mat-form-field-label {
+      /*change color of label*/
+      color: #4f4f4f !important;
+     }
+     ::ng-deep.mat-form-field-underline {
+      /*change color of underline*/
+      background-color: #bdbd !important;
+    } 
+    ::ng-deep.mat-form-field-ripple {
+     /*change color of underline when focused*/
+     background-color: #4f4f4f !important;;
+    }
