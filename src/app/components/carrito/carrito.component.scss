@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.producto{
+    margin: auto;
+    width: 50%;
+    border-bottom: 1px solid #4F4F4F;
+    display: flex;
+}
+
+.producto div:last-child{
+    padding: 25px 20px 0px 20px; 
+}
+
+.producto div:last-child figure img{
+    width: 60px;
+    height: auto;
+}
+
+
+
+figure img{
+    width: 200px;
+    height: 100px;
+    display: block;
+}
+
+.icon{
+width: auto;
+height: 20px;
+}
