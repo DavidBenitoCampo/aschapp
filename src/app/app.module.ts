@@ -52,7 +52,7 @@ import { HeaderComponent } from './header/header.component';
     MatIconModule,
     CdkTableModule,
     CdkTreeModule,
-    FontAwesomeModule
+    FontAwesomeModule,
 
 
   ],
