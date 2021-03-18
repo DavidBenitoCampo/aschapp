@@ -22,7 +22,6 @@ import { MatIconModule } from '@angular/material/icon'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { Router, ActivatedRoute } from '@angular/router';
 
 
 
@@ -37,10 +36,7 @@ import { Router, ActivatedRoute } from '@angular/router';
     ContenidoComponent,
     RegistroProductoComponent,
     FooterComponent,
-    HeaderComponent,
-    ReactiveFormsModule,
-    Router,
-    ActivatedRoute
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
