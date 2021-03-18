@@ -1,20 +1,9 @@
 <div class="contenedor">
-    <div class="row" style="margin-right: 22px;">
+    <div class="row" style="margin-right: 22px;" *ngFor="let product of products">
         <figure>
-            <img src="https://s3-alpha-sig.figma.com/img/7699/9b29/3fd61c780a55adb7ab33674723e1dbf4?Expires=1616371200&Signature=Ld2O~frT6DL~AVhCyQJHYao8BLUVtqsQIZUrRusK5Q3ws7nMAQmpEM5izFnjcRQz5ypz3n0UcYjmlNsZ1c9~BWJ0yh9aZ32dAvUn0az5uJSy1Bq2W1W69ntGf9F64yyxMXdGkOByCyQLXfcwVLkk-2geq5OcKB0GW9dV0XyuLxC1pzY0M2r1e8-uywtKjoBVrSG67urikglJ8EOLqhuOLJ9q2G1qXFdRvBzXqCO8GgR3ZI5Kv5H32jYnM0dfuiOVwhVGbbxGi1YtLMFUWk4Qc4-SJjtU~YyyZhB4CYABZXtC92xCcV0KqMNz9B0ZjWPgobKVqrIJz8io4y0iU4bw-w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                alt="">
+            <img [src]="product.imagen">
             <div class="capa">
-                <h3> El precio es de 30 €</h3>
-            </div>
-        </figure>
-        <input type="submit" value="Comprar">
-    </div>
-    <div class="row" style="margin-left: 22px;">
-        <figure> <img
-                src="https://s3-alpha-sig.figma.com/img/4993/f2d6/400443bc69df61f54fc0bb19b8488b77?Expires=1616371200&Signature=hPaThGdj8i525g~dtXOLD4Lr~taiOlL6CAwgv6U-1EVz1DOzVlf~~1NjYXdxgNCjI-4QPwjUHC5k5pQc1WBEwG8qoQmhpmPjpUIVXqgwM0hf80nLRuRyN8o7FuJXxoY3xI-GfEMP1UHYYeHsNQxDpcMtt1lEF4-Pm7kOdgxyXnNtEoOLxkWIjUcaUm~nBtnBNEOLJO7VI3ZPTqW0xiKMFs-qe0PjE3PuPZQSOIt1FeooMWAo7ekYAG8Imntk9uZxkhmmAQzUJTP1JP16tHmewFXZi8dFlnWMNnj4mjtgW413hUfUX~OuMc5VlgYjCPDthGhFTMM6DYUY4Fa65-xNWA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                alt="">
-            <div class="capa">
-                <h3> El precio es de 20€</h3>
+                <h3>{{product.precio}}</h3>
             </div>
         </figure>
         <input type="submit" value="Comprar">

@@ -22,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -53,6 +54,7 @@ import { HeaderComponent } from './header/header.component';
     CdkTableModule,
     CdkTreeModule,
     FontAwesomeModule,
+    HttpClientModule
 
 
   ],
