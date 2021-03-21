@@ -22,8 +22,11 @@ import { MatIconModule } from '@angular/material/icon'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+<<<<<<< HEAD
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+=======
+>>>>>>> ab3bcae9bcb75906029e1c924fa25ff98c36e1e6
 import { HttpClientModule } from '@angular/common/http';
 
 

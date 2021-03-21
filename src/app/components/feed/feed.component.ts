@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../api.service';
 
 @Component({
   selector: 'app-feed',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
+  products: any;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.apiService.getAllProducts()
+      .then(response => {
+        console.log(response);
+        this.products = response;
+
+      })
+      .catch(error => console.log(error));
+
   }
 
 }
