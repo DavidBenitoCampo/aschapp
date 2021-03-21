@@ -1,51 +1,51 @@
 <div class="contenedor-formulario">
-    <form class="formulario-registro">
+    <form class="formulario-registro" [formGroup]="formulario" (ngSubmit)="onSubmit()">
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Nombre</mat-label>
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" value="" formControlName="nombre">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Apellidos</mat-label>
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" value="" formControlName="apellidos">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Edad</mat-label>
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" value="" formControlName="edad">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>E-mail</mat-label>
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" value="" formControlName="email">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Alias</mat-label>
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" value="" formControlName="nickname">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Contraseña</mat-label>
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" value="" formControlName="contraseña">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Confirmar contraseña</mat-label>
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" value="" formControlName="confirmar_contraseña">
             </mat-form-field>
         </div>
 
@@ -56,12 +56,20 @@
             </mat-form-field>
         </div>
 
-        <section class="rol">
+        <div>
+            <mat-form-field class="input-formulario">
+                <mat-label>Rol</mat-label>
+                <input matInput placeholder="" value="" formControlName="rol">
+            </mat-form-field>
+        </div>
+
+
+        <!--         <section class="rol">
             <label for="">Comprar</label>
             <input type="checkbox" value="vender">
             <label for="">Vender</label>
             <input type="checkbox" value="comprar">
-        </section>
+        </section> -->
 
         <button>Registrar</button>
 

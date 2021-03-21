@@ -22,6 +22,9 @@ import { MatIconModule } from '@angular/material/icon'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -36,7 +39,9 @@ import { HeaderComponent } from './header/header.component';
     ContenidoComponent,
     RegistroProductoComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    UsuarioComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,7 @@ import { HeaderComponent } from './header/header.component';
     CdkTableModule,
     CdkTreeModule,
     FontAwesomeModule,
+    HttpClientModule
 
 
   ],
