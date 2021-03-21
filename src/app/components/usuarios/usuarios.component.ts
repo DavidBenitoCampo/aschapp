@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { user, UsersService } from 'src/app/services/users.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -9,8 +10,9 @@ import { user, UsersService } from 'src/app/services/users.service';
 export class UsuariosComponent implements OnInit {
 
   arrUsuarios: user[]
+  user: user;
 
-  constructor(private usersService: UsersService) {
+  constructor(private usersService: UsersService, private activatedRoute: ActivatedRoute) {
 
     this.arrUsuarios = []
 
@@ -24,6 +26,11 @@ export class UsuariosComponent implements OnInit {
       .catch(error => {
         console.log(error);
       });
+
+    this.activatedRoute.params.subscribe(async params => {
+      const user = await this.usersService.getUserById(params.users_id);
+      this.user = user[0]
+    })
   }
 
 }

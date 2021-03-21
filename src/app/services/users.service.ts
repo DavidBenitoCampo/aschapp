@@ -26,4 +26,8 @@ export class UsersService {
   getAll(): Promise<user[]> {
     return this.httpClient.get<user[]>(this.baseUrl).toPromise();
   }
+
+  getUserById(pId): Promise<user> {
+    return this.httpClient.get<user>(`${this.baseUrl}/${pId}`).toPromise();
+  }
 }
