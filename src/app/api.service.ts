@@ -3,14 +3,16 @@ import { Injectable } from '@angular/core';
 
 
 @Injectable({
+
     providedIn: 'root'
 })
 export class ApiService {
 
-    constructor(private httpClient: HttpClient) { }
 
-    getAllProducts() {
-        return this.httpClient.get(`http://localhost:3000/products`).toPromise();
 
-    }
+    constructor() { }
+
+
+
+
 }
