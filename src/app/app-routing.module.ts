@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { RegistroProductoComponent } from './components/registro-producto/registro-producto.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'registro', component: FormularioComponent },
   { path: 'addProducto', component: RegistroProductoComponent },
   { path: 'carrito', component: CarritoComponent },
+  { path: 'usuarios', component: UsuariosComponent },
   { path: '**', redirectTo: '/home' }
 ]
 

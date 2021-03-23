@@ -1,9 +1,13 @@
 <div class="usuarios">
     <div class="usuario" *ngFor="let usuario of arrUsuarios">
-        <img [src]="usuario.cargar_imagen" alt="">
-        <h3>{{usuario.nickname}}</h3>
-        <p>{{usuario.nombre}} {{usuario.apellidos}}</p>
-        <p>{{usuario.edad}}</p>
-
+        <div>
+            <h3>@{{usuario.nickname}}</h3>
+            <img [src]="usuario.foto" alt="">
+        </div>
+        <div>
+            <h4>{{usuario.nombre}} {{usuario.apellidos}}</h4>
+            <p>{{usuario.fecha_nacimiento | date}}</p>
+        </div>
+        <mat-icon>clear</mat-icon>
     </div>
 </div>

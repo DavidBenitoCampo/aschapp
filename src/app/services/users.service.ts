@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export interface user {
   nombre: string,
   apellidos: string,
-  edad: number,
+  fecha_nacimiento: Date,
   email: string,
   nickname: string,
   contraseña: string,
   confirmar_contraseña: string,
-  cargar_imagen: string,
+  foto: string,
   rol: string
 }
 
@@ -29,5 +29,19 @@ export class UsersService {
 
   getUserById(pId): Promise<user> {
     return this.httpClient.get<user>(`${this.baseUrl}/${pId}`).toPromise();
+  }
+
+  insert(formValues) {
+    console.log(formValues);
+    formValues.foto = "http";
+    return this.httpClient.post(this.baseUrl, formValues, this.createHeaders()).toPromise()
+  }
+
+  createHeaders() {
+    return {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
   }
 }

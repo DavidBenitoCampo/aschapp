@@ -1,9 +1,14 @@
 
 .header{
-    border-bottom: 2px solid #4F4F4F;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    }
+    hr{
+        color: #4f4f4f;
+        border-bottom: 2px solid #4F4F4F;
+        width: 95%;
+        margin-top: 0px;
     }
     
     figure img{
@@ -17,8 +22,11 @@
         height: 40px;
         font-family: Montserrat;
         font-size: 700;
+        margin: auto;
+
     }
-    
-    span{
-        width: 200px;
+
+    mat-icon{
+        color: #4F4F4F;
+        margin: 5px;
     }

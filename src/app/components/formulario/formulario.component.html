@@ -17,7 +17,7 @@
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Edad</mat-label>
-                <input matInput placeholder="" value="" formControlName="edad">
+                <input matInput type="date" placeholder="" value="" formControlName="fecha_nacimiento">
             </mat-form-field>
         </div>
 
@@ -38,23 +38,23 @@
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Contraseña</mat-label>
-                <input matInput placeholder="" value="" formControlName="contraseña">
+                <input matInput placeholder="" value="" formControlName="contrasena">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field class="input-formulario">
                 <mat-label>Confirmar contraseña</mat-label>
-                <input matInput placeholder="" value="" formControlName="confirmar_contraseña">
+                <input matInput placeholder="" value="" formControlName="confirmar_contrasena">
             </mat-form-field>
         </div>
 
-        <div>
+        <!-- <div>
             <mat-form-field class="cargar-imagen">
                 <ngx-mat-file-input formControlName="archivo" placeholder="Cargar imagen"></ngx-mat-file-input>
                 <mat-icon matSuffix>folder</mat-icon>
             </mat-form-field>
-        </div>
+        </div> -->
 
         <div>
             <mat-form-field class="input-formulario">
@@ -71,7 +71,7 @@
             <input type="checkbox" value="comprar">
         </section> -->
 
-        <button>Registrar</button>
+        <input class="boton-registro" type="submit" value="Registrar">
 
     </form>
 
