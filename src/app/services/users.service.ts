@@ -44,4 +44,8 @@ export class UsersService {
       })
     }
   }
+
+  login(formValues): Promise<any> {
+    return this.httpClient.post(`${this.baseUrl}/login`, formValues).toPromise()
+  }
 }
