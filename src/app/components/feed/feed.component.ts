@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../api.service';
+import { ProductoService } from '../../services/producto.service';
 
 @Component({
   selector: 'app-feed',
@@ -9,10 +9,10 @@ import { ApiService } from '../../api.service';
 export class FeedComponent implements OnInit {
   products: any;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private productoService: ProductoService) { }
 
   ngOnInit() {
-    this.apiService.getAllProducts()
+    this.productoService.getAllProducts()
       .then(response => {
         console.log(response);
         this.products = response;

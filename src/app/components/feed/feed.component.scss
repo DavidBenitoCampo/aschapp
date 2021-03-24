@@ -2,14 +2,16 @@
 
 .contenedor{
     
-    margin-top: 7%;
+    margin-top: 2%;
 
     display: flex;
     justify-content: center;
     column-count: 2;
+    flex-wrap: wrap;
    
  .row input{
  font-weight: bold;
+ margin-bottom: 100px;
  }
 }
 
@@ -62,9 +64,9 @@ margin: 0 auto;
 
 div input {
     text-align: center;
-    margin-top: 18px;
-    width: 50%;
-    height: 7%;
+    margin-top: 5px;
+    width: 225px;
+    height: 45px;
     cursor: pointer;
     background-color: white;
     color:  #4f4f4f;

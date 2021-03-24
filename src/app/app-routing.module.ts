@@ -9,7 +9,7 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: '', pathMatch: 'full', redirectTo: '/login' },
   { path: 'home', component: FeedComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: FormularioComponent },
