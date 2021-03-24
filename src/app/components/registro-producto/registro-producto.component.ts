@@ -32,6 +32,6 @@ export class RegistroProductoComponent implements OnInit {
     const response = await this.productoService.insert(this.formulario.value);
     console.log(response)
     //Con esto le paso la ruta hacia donde lo quiero mover al hacer submit.
-    this.router.navigate(['/feed'])
+    this.router.navigate(['/'])
   }
 }

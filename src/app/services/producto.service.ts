@@ -24,8 +24,8 @@ export class ProductoService {
         return this.httpClient.get<product[]>(this.baseUrl, this.createHeaders()).toPromise();
     }
 
-    insert(formValues): Promise<product[]> {
-        return this.httpClient.post<product[]>(this.baseUrl, formValues, this.createHeaders()).toPromise();
+    insert(formValues) {
+        return this.httpClient.post(this.baseUrl, formValues, this.createHeaders()).toPromise();
     }
 
 
