@@ -24,12 +24,7 @@ export class UsersService {
     this.baseUrl = 'http://localhost:3000/api';
   }
   getAll(): Promise<user[]> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJjYWR1Y2EiOjE2MTcxNzM5MjgsImlhdCI6MTYxNjU3MzkyOH0.pdVIzwJF661VHpEQMRSLK0s7Mmxa-FltHR5iGi41mK8'
-      })
-    }
-    return this.httpClient.get<user[]>(`${this.baseUrl}/users`).toPromise();
+    return this.httpClient.get<user[]>(`${this.baseUrl}/users`, this.createHeaders()).toPromise();
   }
 
   getUserById(pId): Promise<user> {
@@ -39,7 +34,7 @@ export class UsersService {
   insert(formValues) {
     console.log(formValues);
     formValues.foto = "http";
-    return this.httpClient.post(this.baseUrl, formValues).toPromise()
+    return this.httpClient.post(`${this.baseUrl}/login`, formValues).toPromise()
   }
 
   createHeaders() {
@@ -51,6 +46,6 @@ export class UsersService {
   }
 
   login(formValues): Promise<any> {
-    return this.httpClient.post(`${this.baseUrl}/login/enter`, formValues, this.createHeaders()).toPromise()
+    return this.httpClient.post(`${this.baseUrl}/login/enter`, formValues).toPromise()
   }
 }

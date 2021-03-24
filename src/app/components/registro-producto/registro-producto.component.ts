@@ -17,9 +17,7 @@ export class RegistroProductoComponent implements OnInit {
     this.formulario = new FormGroup({
       tipo_producto: new FormControl(),
       precio: new FormControl(),
-      producto: new FormControl(),
-
-
+      producto: new FormControl()
     })
   }
 

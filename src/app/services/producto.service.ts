@@ -21,7 +21,7 @@ export class ProductoService {
     constructor(private httpClient: HttpClient) { this.baseUrl = `http://localhost:3000/api` }
 
     getAllProducts(): Promise<product[]> {
-        return this.httpClient.get<product[]>(this.baseUrl, this.createHeaders()).toPromise();
+        return this.httpClient.get<product[]>(`${this.baseUrl}/products`, this.createHeaders()).toPromise();
     }
 
 
