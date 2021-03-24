@@ -7,8 +7,8 @@ export interface user {
   fecha_nacimiento: Date,
   email: string,
   nickname: string,
-  contraseña: string,
-  confirmar_contraseña: string,
+  contrasena: string,
+  confirmar_contrasena: string,
   foto: string,
   rol: string
 }
@@ -21,31 +21,36 @@ export class UsersService {
   baseUrl: string
 
   constructor(private httpClient: HttpClient) {
-    this.baseUrl = 'http://localhost:3000/users';
+    this.baseUrl = 'http://localhost:3000/api';
   }
   getAll(): Promise<user[]> {
-    return this.httpClient.get<user[]>(this.baseUrl).toPromise();
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJjYWR1Y2EiOjE2MTcxNzM5MjgsImlhdCI6MTYxNjU3MzkyOH0.pdVIzwJF661VHpEQMRSLK0s7Mmxa-FltHR5iGi41mK8'
+      })
+    }
+    return this.httpClient.get<user[]>(`${this.baseUrl}/users`).toPromise();
   }
 
   getUserById(pId): Promise<user> {
-    return this.httpClient.get<user>(`${this.baseUrl}/${pId}`).toPromise();
+    return this.httpClient.get<user>(`${this.baseUrl}/users/${pId}`, this.createHeaders()).toPromise();
   }
 
   insert(formValues) {
     console.log(formValues);
     formValues.foto = "http";
-    return this.httpClient.post(this.baseUrl, formValues, this.createHeaders()).toPromise()
+    return this.httpClient.post(this.baseUrl, formValues).toPromise()
   }
 
   createHeaders() {
     return {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
+        'authorization': localStorage.getItem('token_user')
       })
     }
   }
 
   login(formValues): Promise<any> {
-    return this.httpClient.post(`${this.baseUrl}/login`, formValues).toPromise()
+    return this.httpClient.post(`${this.baseUrl}/login/enter`, formValues, this.createHeaders()).toPromise()
   }
 }

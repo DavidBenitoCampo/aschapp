@@ -10,7 +10,7 @@ export class ApiService {
     constructor(private httpClient: HttpClient) { }
 
     getAllProducts() {
-        return this.httpClient.get(`http://localhost:3000/products`).toPromise();
+        return this.httpClient.get(`http://localhost:3000/api/products`).toPromise();
 
     }
 }
