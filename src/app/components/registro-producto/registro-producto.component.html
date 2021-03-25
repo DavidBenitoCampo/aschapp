@@ -1,47 +1,42 @@
 <div class="contenedor">
 
-    <form class="example-form">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="example-form">
 
         <div>
             <h4>Registro de productos</h4>
-            <mat-form-field appearance="fill">
-                <mat-label>Productos</mat-label>
-                <select matNativeControl required>
-                    <option value="pantalon">Pantalón</option>
-                    <option value="calzoncillos">Calzoncillo</option>
-                    <option value="calcetines">Calcetines</option>
-                    <option value="camiseta">Camiseta</option>
-                    <option value="camisa">Camisa</option>
-                    <option value="bragas">Bragas</option>
-                    <option value="tanga">Tanga</option>S
-                    <option value="falda">Falda</option>
-                    <option value="chaqueta">Chaqueta</option>
+            <mat-form-field appearance=" fill">
+                <mat-label>Tipo de producto</mat-label>
+                <select matNativeControl required formControlName="tipo_producto">
+                    <option value="ropa interior masc">Ropa interior masculina</option>
+                    <option value="ropa interior fem">Ropa interior femenina</option>
+                    <option value="calzado masc">Calzado masculino</option>
+                    <option value="calzado fem">Calzado femenino</option>
                 </select>
             </mat-form-field>
         </div>
 
-        <div style="margin-top: 40px;">
+        <div class="space">
             <mat-form-field class="example-full-width">
                 <mat-label>
                     PRECIO
                 </mat-label>
-                <input matInput type="text">
+                <input matInput type="text" formControlName="precio">
             </mat-form-field>
         </div>
 
-        <div style="margin-top: 40px;">
+        <div class="space">
             <mat-form-field class="example-full-width">
                 <mat-label>
-                    USUARIO
+                    PRODUCTO
                 </mat-label>
-                <input matInput type="text">
+                <input matInput type="text" formControlName="producto">
             </mat-form-field>
         </div>
 
-        <div style="margin-top: 40px;">
+        <div class="space">
 
             <mat-form-field>
-                <ngx-mat-file-input formControlName="archivo" placeholder="ARCHIVO"></ngx-mat-file-input>
+                <ngx-mat-file-input types="file" placeholder="Archivo"></ngx-mat-file-input>
                 <mat-icon matSuffix>folder</mat-icon>
             </mat-form-field>
 

@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
 
   signin: FormGroup;
   errorMessage: string;
+
   hide = true;
   get passwordInput() { return this.signin.get('password'); }
 
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
     private router: Router) {
     this.signin = new FormGroup({
       email: new FormControl(),
-      contrasena: new FormControl('', [Validators.required, Validators.min(3)])
+      contrasena: new FormControl('', [Validators.required, Validators.min(5)])
     });
 
 
@@ -35,6 +36,7 @@ export class LoginComponent implements OnInit {
     this.errorMessage = null;
     this.usersService.login(this.signin.value)
       .then(response => {
+        console.log(response)
         if (response.error) {
           setTimeout(() => this.errorMessage = 'Te has equivocado!', 500);
         } else {
