@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class FormularioComponent implements OnInit {
 
   formulario: FormGroup;
+  files;
 
   constructor(private usersService: UsersService, private router: Router) {
     this.formulario = new FormGroup({
@@ -21,7 +22,6 @@ export class FormularioComponent implements OnInit {
       nickname: new FormControl,
       contrasena: new FormControl,
       confirmar_contrasena: new FormControl,
-      foto: new FormControl,
       rol: new FormControl
     })
   }
@@ -32,11 +32,27 @@ export class FormularioComponent implements OnInit {
   }
 
   async onSubmit() {
-    const response = await this.usersService.insert(this.formulario.value)
-    console.log(response);
-    this.router.navigate(['/'])
+    // Creación del objeto donde incluimos todos los campos del formulario y además la imagen
+    let fd = new FormData();
+    fd.append('nombre', this.formulario.value.nombre);
+    fd.append('apellidos', this.formulario.value.apellidos);
+    fd.append('fecha_nacimiento', this.formulario.value.fecha_nacimiento);
+    fd.append('email', this.formulario.value.email);
+    fd.append('nickname', this.formulario.value.nickname);
+    fd.append('contrasena', this.formulario.value.contrasena);
+    fd.append('rol', this.formulario.value.rol);
+    fd.append('foto', this.files[0]);
+
+    //  Delegamos el envío del formulario en el servicio
+    this.usersService.insert(fd).then(result => {
+      this.router.navigate(['']);
+      console.log(result);
+    })
   }
 
+  onChange($event) {
+    this.files = $event.target.files;
+  }
 }
 
 

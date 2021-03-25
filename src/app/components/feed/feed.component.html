@@ -1,5 +1,6 @@
 <div class="contenedor">
-    <div class="row" style="margin-right: 22px;" *ngFor="let product of products">
+    <div class="row" *ngFor="let product of products">
+        <div class="col-sm"></div>
         <figure>
             <img [src]="'http://localhost:3000/images/' + product.imagen">
             <div class="capa">
