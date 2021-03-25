@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductoService } from 'src/app/services/producto.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Form, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class RegistroProductoComponent implements OnInit {
 
   formulario: FormGroup;
+  files;
 
   constructor(private productoService: ProductoService,
     private router: Router) {
@@ -18,7 +19,9 @@ export class RegistroProductoComponent implements OnInit {
       tipo_producto: new FormControl(),
       precio: new FormControl(),
       producto: new FormControl()
+
     })
+
   }
 
 
@@ -26,10 +29,17 @@ export class RegistroProductoComponent implements OnInit {
   }
 
   async onSubmit() {
-    console.log(this.formulario.value)
-    const response = await this.productoService.insert(this.formulario.value);
-    console.log(response)
-    //Con esto le paso la ruta hacia donde lo quiero mover al hacer submit.
-    this.router.navigate(['/feed'])
+    let fd = new FormData();
+    fd.append('tipo_producto', this.formulario.value.tipo_producto);
+    fd.append('precio', this.formulario.value.precio);
+    fd.append('producto', this.formulario.value.producto);
+    fd.append('imagen', this.files);
+
+    //  Delegamos el envío del formulario en el servicio
+    this.productoService.insert(fd).then(result => {
+      this.router.navigate(['']);
+    })
   }
+
 }
+

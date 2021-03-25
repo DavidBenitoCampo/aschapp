@@ -18,19 +18,20 @@ export class ProductoService {
 
     baseUrl: string;
 
-    constructor(private httpClient: HttpClient) { this.baseUrl = `http://localhost:3000/api` }
+    constructor(private httpClient: HttpClient) { this.baseUrl = `http://localhost:3000/api/products` }
 
     getAllProducts(): Promise<product[]> {
-        return this.httpClient.get<product[]>(`${this.baseUrl}/products`, this.createHeaders()).toPromise();
+        return this.httpClient.get<product[]>(`${this.baseUrl}`, this.createHeaders()).toPromise();
     }
 
 
     getUserById(pId): Promise<product[]> {
-        return this.httpClient.get<product[]>(`${this.baseUrl}/products/${pId}`, this.createHeaders()).toPromise();
+        return this.httpClient.get<product[]>(`${this.baseUrl}${pId}`, this.createHeaders()).toPromise();
     }
 
-    insert(formValues) {
-        return this.httpClient.post(this.baseUrl, formValues, this.createHeaders()).toPromise();
+
+    insert(fd: FormData) {
+        return this.httpClient.post(this.baseUrl, fd).toPromise();
     }
 
 
