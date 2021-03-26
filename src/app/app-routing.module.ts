@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'addProducto', component: RegistroProductoComponent },
   { path: 'pedido', component: CarritoComponent },
   { path: 'usuarios', component: UsuariosComponent },
-  { path: 'profile', component: UsuarioComponent },
+  { path: 'profile/:user_id', component: UsuarioComponent },
   { path: '**', redirectTo: '/home' }
 ]
 

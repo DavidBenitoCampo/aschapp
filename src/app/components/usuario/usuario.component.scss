@@ -1,0 +1,24 @@
+.usuario_producto{
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+}
+
+.usuario{
+    margin-top: 3%;
+    border-bottom: 2px solid #4F4F4F;
+    img{
+        width: 50%;
+        height: 30%;
+    }
+}
+
+.producto{
+    width: 60%;
+    border-bottom: 2px solid #4F4F4F;
+    margin: auto;
+    img{
+        width: 100%;
+    }
+}

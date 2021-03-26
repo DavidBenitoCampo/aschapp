@@ -1,1 +1,19 @@
-<p>usuario works!</p>
+<div class="usuario_producto">
+    <div class="usuario">
+        <div>
+            <h3>@{{user.nickname}}</h3>
+            <img [src]="user.foto" alt="">
+        </div>
+        <div>
+            <h4>{{user.nombre}}</h4>
+            <p>{{user.fecha_nacimiento | date}}</p>
+        </div>
+        <mat-icon>clear</mat-icon>
+    </div>
+    <div class="producto" *ngFor="let producto of arrProductos">
+        {{producto.archivo}}
+        <img [src]="producto.archivo" alt="">
+        <p>{{producto.precio}}</p>
+        <input type="submit" value="comprar">
+    </div>
+</div>
