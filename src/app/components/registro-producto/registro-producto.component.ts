@@ -29,17 +29,22 @@ export class RegistroProductoComponent implements OnInit {
   }
 
   async onSubmit() {
+    // Creación del objeto donde incluimos todos los campos del formulario y además la imagen
     let fd = new FormData();
     fd.append('tipo_producto', this.formulario.value.tipo_producto);
     fd.append('precio', this.formulario.value.precio);
     fd.append('producto', this.formulario.value.producto);
-    fd.append('imagen', this.files);
+    fd.append('imagen', this.files[0]);
 
     //  Delegamos el envío del formulario en el servicio
     this.productoService.insert(fd).then(result => {
       this.router.navigate(['']);
+      console.log(result);
     })
   }
 
+  onChange($event) {
+    this.files = $event.target.files;
+  }
 }
 

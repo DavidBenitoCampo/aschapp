@@ -36,7 +36,7 @@ export class ProductoService {
     }
 
     insert(fd: FormData) {
-        return this.httpClient.post(this.baseUrl, fd).toPromise();
+        return this.httpClient.post(this.baseUrl, fd, this.createHeaders()).toPromise();
     }
 
 

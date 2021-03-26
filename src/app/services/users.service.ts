@@ -36,11 +36,10 @@ export class UsersService {
     return this.httpClient.get<user>(`${this.baseUrl}/users/profile/${pId}`, this.createHeaders()).toPromise();
   }
 
-  insert(formValues) {
-    console.log(formValues);
-    formValues.foto = "http";
-    return this.httpClient.post(`${this.baseUrl}/login`, formValues).toPromise()
+  insert(fd: FormData) {
+    return this.httpClient.post(`${this.baseUrl}/login`, fd).toPromise();
   }
+
 
   createHeaders() {
     return {
