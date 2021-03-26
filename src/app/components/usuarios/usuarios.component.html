@@ -2,7 +2,7 @@
     <div class="usuario" *ngFor="let usuario of arrUsuarios">
         <div>
             <h3>@{{usuario.nickname}}</h3>
-            <img [src]="usuario.foto" alt="">
+            <img [src]="'http://localhost:3000/images/' + usuario.foto" alt="">
         </div>
         <div>
             <h4>{{usuario.nombre}} {{usuario.apellidos}}</h4>
