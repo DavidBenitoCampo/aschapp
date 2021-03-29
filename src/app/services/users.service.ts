@@ -19,9 +19,11 @@ export interface user {
 export class UsersService {
 
   baseUrl: string
+  logueado = false;
 
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'http://localhost:3000/api';
+
   }
   getAll(): Promise<user[]> {
     /*     const httpOptions = {
@@ -50,6 +52,12 @@ export class UsersService {
   }
 
   login(formValues): Promise<any> {
+
     return this.httpClient.post(`${this.baseUrl}/login/enter`, formValues).toPromise()
+
+  }
+
+  islogged() {
+    return localStorage.getItem('token_user')
   }
 }

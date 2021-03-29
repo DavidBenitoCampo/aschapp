@@ -25,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -58,11 +59,11 @@ import { HttpClientModule } from '@angular/common/http';
     CdkTableModule,
     CdkTreeModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
 
 
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,16 +8,17 @@ import { RegistroProductoComponent } from './components/registro-producto/regist
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { AuthGuard } from './guards/auth.guard'
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/home' },
-  { path: 'home', component: FeedComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/login' },
+  { path: 'home', component: FeedComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: FormularioComponent },
-  { path: 'addProducto', component: RegistroProductoComponent },
-  { path: 'pedido', component: CarritoComponent },
-  { path: 'usuarios', component: UsuariosComponent },
-  { path: 'profile/:user_id', component: UsuarioComponent },
+  { path: 'addProducto', component: RegistroProductoComponent, canActivate: [AuthGuard] },
+  { path: 'pedido', component: CarritoComponent, canActivate: [AuthGuard] },
+  { path: 'usuarios', component: UsuariosComponent, canActivate: [AuthGuard] },
+  { path: 'profile/:user_id', component: UsuarioComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '/home' }
 ]
 

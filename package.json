@@ -29,6 +29,7 @@
     "material": "^0.4.3",
     "ng-mat-icon-bar": "^9.0.1",
     "ng-mat-icons": "^2.0.0",
+    "ngx-cookie-service": "^11.0.2",
     "ngx-material-file-input": "^2.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
