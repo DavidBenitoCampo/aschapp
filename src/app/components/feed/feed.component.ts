@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductoService } from '../../services/producto.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
@@ -9,7 +10,8 @@ import { ProductoService } from '../../services/producto.service';
 export class FeedComponent implements OnInit {
   products: any;
 
-  constructor(private productoService: ProductoService) { }
+  constructor(private productoService: ProductoService,
+    private router: Router) { }
 
   ngOnInit() {
     this.productoService.getAllProducts()
@@ -22,4 +24,11 @@ export class FeedComponent implements OnInit {
 
   }
 
+  addProduct(pProductId) {
+    this.productoService.insertCarrito(pProductId).then(result => {
+      // this.router.navigate(['/carrito']);
+      console.log(result);
+    }
+    )
+  }
 }

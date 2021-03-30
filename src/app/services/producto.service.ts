@@ -39,6 +39,11 @@ export class ProductoService {
         return this.httpClient.post(this.baseUrl, fd, this.createHeaders()).toPromise();
     }
 
+    insertCarrito(pProductoId) {
+        console.log(pProductoId)
+        return this.httpClient.post(`${this.baseUrl}/carrito/${pProductoId}`, {}, this.createHeaders()).toPromise();
+    }
+
 
 
     createHeaders() {
