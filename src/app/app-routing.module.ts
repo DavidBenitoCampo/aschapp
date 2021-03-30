@@ -8,6 +8,8 @@ import { RegistroProductoComponent } from './components/registro-producto/regist
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { MiPerfilComponent } from './components/mi-perfil/mi-perfil.component';
+import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'pedido', component: CarritoComponent },
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'profile/:user_id', component: UsuarioComponent },
+  { path: 'miPerfil', component: MiPerfilComponent },
+  { path: 'editarPerfil', component: EditarPerfilComponent },
   { path: '**', redirectTo: '/home' }
 ]
 

@@ -7,7 +7,7 @@ export interface product {
     productos: string,
     precio: number,
     usuario: string,
-    archivo: string
+    imagen: string
 }
 
 @Injectable({
@@ -18,8 +18,10 @@ export class ProductoService {
 
     baseUrl: string;
 
+
     constructor(private httpClient: HttpClient) {
         this.baseUrl = `http://localhost:3000/api/products`
+
     }
 
     getAllProducts(): Promise<product[]> {
@@ -37,6 +39,10 @@ export class ProductoService {
 
     insert(fd: FormData) {
         return this.httpClient.post(this.baseUrl, fd, this.createHeaders()).toPromise();
+    }
+
+    getByCategory(pCategory: string): Promise<product[]> {
+        return this.httpClient.get<product[]>(`${this.baseUrl}/filtro/${pCategory}`, this.createHeaders()).toPromise();
     }
 
 

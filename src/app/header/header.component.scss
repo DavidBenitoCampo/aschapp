@@ -23,10 +23,21 @@
         font-family: Montserrat;
         font-size: 700;
         margin: auto;
+        text-align: center;
 
     }
 
     mat-icon{
-        color: #4F4F4F;
+        color: #bdbdbd;
         margin: 5px;
+        transition: color .5s;
+       
+    } 
+    mat-icon:hover{
+       color: #4f4f4f;
+       cursor: pointer;
+    }
+
+    mat-icon.active{
+        color: #4F4F4F;
     }

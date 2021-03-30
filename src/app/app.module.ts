@@ -25,6 +25,8 @@ import { HeaderComponent } from './header/header.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MiPerfilComponent } from './components/mi-perfil/mi-perfil.component';
+import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.component';
 
 
 
@@ -41,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HeaderComponent,
     UsuarioComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    MiPerfilComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,

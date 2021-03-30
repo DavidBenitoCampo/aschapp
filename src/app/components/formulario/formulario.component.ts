@@ -41,7 +41,9 @@ export class FormularioComponent implements OnInit {
     fd.append('nickname', this.formulario.value.nickname);
     fd.append('contrasena', this.formulario.value.contrasena);
     fd.append('rol', this.formulario.value.rol);
-    fd.append('foto', this.files[0]);
+    if (this.files && this.files.length > 0) {
+      fd.append('foto', this.files[0])
+    };
 
     //  Delegamos el envío del formulario en el servicio
     this.usersService.insert(fd).then(result => {

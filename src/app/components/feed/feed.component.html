@@ -1,3 +1,18 @@
+<mat-form-field appearance=" fill">
+    <select matNativeControl required (change)="onChange($event)">
+        <!--     <option value="todo">Todas las categorias</option>
+    <option [value]="categoria" *ngFor="let categoria of tipo_producto">
+        {{categoria}}
+    </option> -->
+        <option value="todos">todas las categorias</option>
+        <option value="ropa interior masc">ropa interior masc</option>
+        <option value="ropa interior fem">ropa interior fem</option>
+        <option value="calzado masc">calzado masc</option>
+        <option value="calzado fem">calzado fem</option>
+    </select>
+</mat-form-field>
+
+
 <div class="contenedor">
     <div class="row" *ngFor="let product of products">
         <div class="col-sm"></div>

@@ -1,4 +1,4 @@
-<div class="usuario_producto">
+<div class="miPerfil">
     <h2>@{{user.nickname}}</h2>
     <div class="usuario">
         <div>
@@ -10,13 +10,7 @@
             <p>{{user.fecha_nacimiento | date}}</p>
         </div>
         <div>
-            <mat-icon routerLink="/usuarios">clear</mat-icon>
+            <mat-icon routerLink="/editarPerfil">edit</mat-icon>
         </div>
-    </div>
-
-    <div class="producto" *ngFor="let producto of arrProductos">
-        <img [src]="'http://localhost:3000/images/' + producto.imagen" alt="">
-        <p>{{producto.precio}}€</p>
-        <input type="submit" value="comprar">
     </div>
 </div>

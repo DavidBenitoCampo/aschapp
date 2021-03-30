@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export interface user {
+  id: number,
   nombre: string,
   apellidos: string,
   fecha_nacimiento: Date,
@@ -38,6 +39,14 @@ export class UsersService {
 
   insert(fd: FormData) {
     return this.httpClient.post(`${this.baseUrl}/login`, fd).toPromise();
+  }
+
+  updateUser(formsValue) {
+    return this.httpClient.put(`${this.baseUrl}/users/editar`, formsValue, this.createHeaders()).toPromise()
+  }
+
+  getMyProfile(): Promise<user> {
+    return this.httpClient.get<user>(`${this.baseUrl}/users/myprofile/`, this.createHeaders()).toPromise()
   }
 
 

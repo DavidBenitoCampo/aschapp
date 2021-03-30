@@ -1,13 +1,15 @@
 <div class="usuarios">
-    <div class="usuario" *ngFor="let usuario of arrUsuarios">
-        <div>
-            <h3>@{{usuario.nickname}}</h3>
-            <img [src]="usuario.foto" alt="">
+
+    <div class="usuario" *ngFor="let usuario of arrUsuarios" routerLink="/profile/{{usuario.id}}">
+        <h2>@{{usuario.nickname}}</h2>
+        <div class="usuario_contenido">
+            <div>
+                <img [src]="'http://localhost:3000/images/' + usuario.foto" alt="">
+            </div>
+            <div>
+                <h3>{{usuario.nombre}} {{usuario.apellidos}}</h3>
+                <p>{{usuario.fecha_nacimiento | date}}</p>
+            </div>
         </div>
-        <div>
-            <h4>{{usuario.nombre}} {{usuario.apellidos}}</h4>
-            <p>{{usuario.fecha_nacimiento | date}}</p>
-        </div>
-        <mat-icon>clear</mat-icon>
     </div>
 </div>

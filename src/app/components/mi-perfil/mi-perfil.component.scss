@@ -3,23 +3,22 @@
     padding: 0;
 }
 
-.usuarios{
+.miPerfil{
     padding: 20px;
-    width: 40%;
+    width: 50%;
     margin: auto;
+    justify-content: center;
 }
 
 .usuario{
-    margin-top: 5%;
-}
-.usuario_contenido{
+    margin-top: 3%;
     border-bottom: 2px solid #4F4F4F;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     img{
         width: 350px;
-        height: 450px;
+        height: 500px;
         margin-bottom: 0px;
         object-fit: cover;
     }
@@ -33,16 +32,20 @@
     }
 }
 
-.usuario_contenido div:first-child{
+.usuario div:first-child{
     display: flex;
     justify-content: center;
     img{
         width: 100%;
     }
-    width: 70%;
+    width: 60%;
 }
 
-.usuario_contenido div:last-child{
+.usuario div:nth-child(2){
+    margin-left: 0px;
     width: 30%;
-    margin-left: 5px;
+}
+
+.usuario div:last-child{
+    width: auto;
 }

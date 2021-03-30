@@ -19,7 +19,18 @@ export class FeedComponent implements OnInit {
 
       })
       .catch(error => console.log(error));
+  }
 
+  async onChange($event) {
+    try {
+      if ($event.target.value === 'todos') {
+        this.products = await this.productoService.getAllProducts();
+      } else {
+        this.products = await this.productoService.getByCategory($event.target.value);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
 }
