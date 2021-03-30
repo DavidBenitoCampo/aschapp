@@ -39,9 +39,11 @@ export class LoginComponent implements OnInit {
         console.log(response)
         if (response.error) {
           setTimeout(() => this.errorMessage = 'Te has equivocado!', 500);
+          this.usersService.logueado = false;
         } else {
           localStorage.setItem('token_user', response.token)
           this.router.navigate(['/feed']);
+          this.usersService.logueado = true;
         }
       })
 

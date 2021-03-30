@@ -1,14 +1,14 @@
-<div class="producto">
+<div class="producto" *ngFor="let product of arrProducts">
     <div>
-        <h3>@NickSandell</h3>
+        <h3>@{{product.nickname}}</h3>
         <figure>
-            <img src="../../../assets/image/EKLssLTXYAE7slv.jpg" alt="">
+            <img [src]="'http://localhost:3000/images/' + product.imagen" alt="">
         </figure>
     </div>
     <div>
-        <p>Precio: 150 €</p>
-        <figure>
+        <p>{{product.precio}}€</p>
+        <!-- <figure>
             <img src="../../../assets/image/calzoncillos.png" alt="" class="icon">
-        </figure>
+        </figure> -->
     </div>
 </div>

@@ -1,8 +1,13 @@
 
 
 .contenedor{
+    padding: 0 20%;
+
+    .element {
+        margin: 20px auto;
+    }
     
-    margin-top: 2%;
+    margin-top: 3%;
 
     display: grid;
     grid-template-columns: repeat(2, 2fr);

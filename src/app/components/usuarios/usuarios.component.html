@@ -1,4 +1,5 @@
 <div class="usuarios">
+<<<<<<< HEAD
 
     <div class="usuario" *ngFor="let usuario of arrUsuarios" routerLink="/profile/{{usuario.id}}">
         <h2>@{{usuario.nickname}}</h2>
@@ -10,6 +11,12 @@
                 <h3>{{usuario.nombre}} {{usuario.apellidos}}</h3>
                 <p>{{usuario.fecha_nacimiento | date}}</p>
             </div>
+=======
+    <div class="usuario" *ngFor="let usuario of arrUsuarios">
+        <div>
+            <h3>@{{usuario.nickname}}</h3>
+            <img [src]="'http://localhost:3000/images/' + usuario.foto" alt="">
+>>>>>>> 727bd6d520f9e0b73a02aecbeb8d3f81d78603a4
         </div>
     </div>
 </div>

@@ -25,8 +25,12 @@ import { HeaderComponent } from './header/header.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
 import { MiPerfilComponent } from './components/mi-perfil/mi-perfil.component';
 import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.component';
+=======
+import { CookieService } from 'ngx-cookie-service';
+>>>>>>> 727bd6d520f9e0b73a02aecbeb8d3f81d78603a4
 
 
 
@@ -62,11 +66,11 @@ import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.
     CdkTableModule,
     CdkTreeModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
 
 
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,15 +14,14 @@
 
 
 <div class="contenedor">
-    <div class="row" *ngFor="let product of products">
-        <div class="col-sm"></div>
+    <div class="element" *ngFor="let product of products">
         <figure>
             <img [src]="'http://localhost:3000/images/' + product.imagen">
             <div class="capa">
-                <h3>{{product.precio}}</h3>
+                <h3>{{product.precio}} €</h3>
             </div>
         </figure>
-        <input type="submit" value="Comprar">
+        <input type="submit" value="Comprar" (click)="addProduct(product.id)">
     </div>
 
 </div>

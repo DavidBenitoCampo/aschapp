@@ -1,4 +1,5 @@
 <div class="header">
+<<<<<<< HEAD
     <figure>
         <img src="../../../assets/image/logotipo.png" alt="">
     </figure>
@@ -15,3 +16,25 @@
     </div>
 </div>
 <hr>
+=======
+    <div class="nav-header">
+        <figure>
+            <img src="../../../assets/image/logotipo.png" alt="">
+        </figure>
+        <div class="buscador">
+            <input *ngIf="usersService.islogged()" type="search" placeholder="buscar">
+        </div>
+        <div class="iconos_nav">
+            <!-- <mat-icon *ngIf="usersService.islogged()" routerLink="">favorite</mat-icon> -->
+            <!-- <mat-icon>favorite_border</mat-icon> -->
+            <mat-icon *ngIf="usersService.islogged()" routerLink="">person</mat-icon>
+            <mat-icon *ngIf="usersService.islogged()" routerLink="/pedido">local_grocery_store</mat-icon>
+            <mat-icon *ngIf="usersService.islogged()" routerLink="/home">home</mat-icon>
+            <mat-icon *ngIf="usersService.islogged()" routerLink="/addProducto">add</mat-icon>
+            <mat-icon *ngIf="usersService.islogged()" routerLink="/login" (click)="onClick()">meeting_room</mat-icon>
+
+        </div>
+    </div>
+    <hr>
+</div>
+>>>>>>> 727bd6d520f9e0b73a02aecbeb8d3f81d78603a4
