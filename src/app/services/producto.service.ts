@@ -26,7 +26,6 @@ export class ProductoService {
         return this.httpClient.get<product[]>(`${this.baseUrl}`, this.createHeaders()).toPromise();
     }
 
-
     getUserById(pId): Promise<product[]> {
         return this.httpClient.get<product[]>(`${this.baseUrl}${pId}`, this.createHeaders()).toPromise();
     }
@@ -42,6 +41,10 @@ export class ProductoService {
     insertCarrito(pProductoId) {
         console.log(pProductoId)
         return this.httpClient.post(`${this.baseUrl}/carrito/${pProductoId}`, {}, this.createHeaders()).toPromise();
+    }
+
+    getToCarrito(): Promise<product[]> {
+        return this.httpClient.get<product[]>(`${this.baseUrl}/carrito`, this.createHeaders()).toPromise();
     }
 
 
