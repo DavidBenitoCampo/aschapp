@@ -6,26 +6,24 @@
     width: 100%;
 }
 
-.nav-header{
+.header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+figure img{
+    width: 178px;
+    height: auto;
+}
     
-<<<<<<< HEAD
-    figure img{
-        width: 178px;
-        height: auto;
-    
-    }
-    
-    .buscador input{
-        width: 700px;
-        height: 40px;
-        font-family: Montserrat;
-        font-size: 700;
-        margin: auto;
-        text-align: center;
-=======
+.buscador input{
+    width: 700px;
+    height: 40px;
+    font-family: Montserrat;
+    font-size: 700;
+    margin: auto;
+    text-align: center;
 }
 
 hr{
@@ -35,41 +33,18 @@ hr{
     margin-top: 0px;
 }
 
-figure img{
-    width: 178px;
-    height: auto;
-
-}
-
-.buscador input{
-    width: 700px;
-    height: 40px;
-    font-family: Montserrat;
-    font-size: 700;
-    margin: auto;
->>>>>>> 727bd6d520f9e0b73a02aecbeb8d3f81d78603a4
-
-}
-
-<<<<<<< HEAD
-    mat-icon{
-        color: #bdbdbd;
-        margin: 5px;
-        transition: color .5s;
+mat-icon{
+    color: #bdbdbd;
+    margin: 5px;
+    transition: color .5s;
        
     } 
-    mat-icon:hover{
-       color: #4f4f4f;
-       cursor: pointer;
+
+mat-icon:hover{
+    color: #4f4f4f;
+    cursor: pointer;
     }
 
     mat-icon.active{
         color: #4F4F4F;
     }
-=======
-mat-icon{
-    color: #4F4F4F;
-    margin: 5px;
-    cursor: pointer;
-}
->>>>>>> 727bd6d520f9e0b73a02aecbeb8d3f81d78603a4
