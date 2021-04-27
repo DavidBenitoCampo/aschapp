@@ -7,11 +7,11 @@ import { CdkTreeModule } from '@angular/cdk/tree';
 
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
-import { CompraComponent } from './components/compra/compra.component';
+
 import { LoginComponent } from './components/login/login.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { FeedComponent } from './components/feed/feed.component';
-import { ContenidoComponent } from './components/contenido/contenido.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { RegistroProductoComponent } from './components/registro-producto/registro-producto.component';
@@ -34,11 +34,9 @@ import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.
   declarations: [
     AppComponent,
     FormularioComponent,
-    CompraComponent,
     LoginComponent,
     CarritoComponent,
     FeedComponent,
-    ContenidoComponent,
     RegistroProductoComponent,
     FooterComponent,
     HeaderComponent,
